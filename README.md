@@ -1,5 +1,16 @@
 # UbiLocate: Accurate Ubiquitous Localization with Off-the-Shelf IEEE 802.11ac Devices
 
+*This GitHub project contains all the files needed to run UbiLocate.*
+
+
+UbiLocate is WiFi indoor localization system that copes well with 
+common AP deployment densities and works ubiquitously, i.e., 
+without excessive degradation under NLOS completely implemented 
+on off-the-shelf 801.11ac router. 
+
+
+UbiLocate was presented at MobiSys 2021 and we kindly
+
 This readme contrais the information for configuring the routers,
 sending packets, extracting CSI and process it
 
