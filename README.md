@@ -1,5 +1,3 @@
-# UbiLocate: Accurate Ubiquitous Localization with Off-the-Shelf IEEE 802.11ac Devices
-
 **This GitHub project contains all the files needed to run UbiLocate.**
 
 
