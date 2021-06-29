@@ -17,8 +17,10 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 
 ## Tabla de contenido
 
-- [Insertar HN](#set-up-the-router).
-- 
+- [Set up the router](#set-up-the-router).
+- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)
+- [Extracting CSI](#extracting-csi)
+
 This readme contrais the information for configuring the routers,
 sending packets, extracting CSI and process it
 
@@ -33,8 +35,6 @@ and save it in a pcap files
 data from pcap files to MATLAB files and also calibrate the CSI
 * mat_files: It contains the mat files, CSI data
 
-
-Steps:
 
 ## Set up the router
 
@@ -57,9 +57,9 @@ Once these steps are done:
 * Copyt the LEGACY160 to the TX router inside the /jffs/ folder
 
 
------------------------------------------------------------------
-Enabling NTP on a linux server
------------------------------------------------------------------
+
+## Enabling NTP on a linux server
+
 In order to save the CSI data, you have to install NTP in a linux
 server, this server must be connected to all routers, it must
 be in the same network.
@@ -80,9 +80,11 @@ Start NTP server, run:
 sudo /etc/init.d/ntp start
 
 The server have to be running while the capturing CSI data
------------------------------------------------------------------
-Extracting CSI
------------------------------------------------------------------
+
+
+## Extracting CSI
+
+
 To extract CSI, you have to use the files in hadware_scripts. 
 These scripts automitize the extraction based on the scripts 
 inside csisoftware and LEGACY160.
