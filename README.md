@@ -13,8 +13,12 @@ UbiLocate was presented at MobiSys 2021 and we kindly invite you
 to take a look at the full presentation [on TouTube](https://www.youtube.com/watch?v=ULfg9MV4ymQ)
 
 
-### You can find all the details about running UbiLocate in our [wiki](https://github.com/IMDEANetworksWNG/UbiLocate/wiki)
+### You can find all the details about running UbiLocate below
 
+## Tabla de contenido
+
+- [Insertar HN](#set-up-the-router).
+- 
 This readme contrais the information for configuring the routers,
 sending packets, extracting CSI and process it
 
@@ -32,9 +36,8 @@ data from pcap files to MATLAB files and also calibrate the CSI
 
 Steps:
 
------------------------------------------------------------------
-Set up the router
------------------------------------------------------------------
+## Set up the router
+
 
 First, you have to do a firt configuration of the router by 
 the webpage.
