@@ -18,6 +18,7 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 - [Files](#files)
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
+- [Getting CSI by MATLAB](#getting-csi-by-matlab)
 - [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)
 
 
@@ -82,7 +83,7 @@ where name is the name of the folder where you want to save the traces,
 ss means number of spatial streams (recommended values 1 or 4) and packets
 means the number of packets to send
 
-NOTE: Every bash file is configured with the login and pass from as imdea.
+NOTE1: Every bash file is configured with the login and pass from as imdea.
 Please change it. The variable are at the beggining of every file us and pw:
 ```
 # ssh logins
@@ -90,15 +91,18 @@ us="imdea" # change it
 ps="imdea" # change it
 ```
 
-NOTE: This scripts assume that the TX is 192.168.2.3 and 2 RX as 192.168.2.4 
-and 192.168.2.5. Change the number 
+NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+Change the numbers:
+
+# rx and tx numbers
+tx="3"
+rxs="4"
+
+rxs can have more than one router. Simple add more numbers at the end. Example rxs="4 5"
 
 
+## Getting CSI by MATLAB
 
-
------------------------------------------------------------------
-Process the CSI by MATLAB
------------------------------------------------------------------
 
 Run the follwoing mat_files:
 * matlab_scripts/Extract_Data/Extract_CSI.m to move from pcap file
