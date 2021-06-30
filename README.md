@@ -82,8 +82,8 @@ where name is the name of the folder where you want to save the traces,
 ss means number of spatial streams (recommended values 1 or 4) and packets
 means the number of packets to send
 
-NOTE: Every bash file is configured with the logins and pass from
-the IMDEA setup, please change it with your configuration.
+NOTE: Every bash file is configured with the login and pass from as imdea.
+Please change it. The variable are at the beggining of every file us and pw
 
 -----------------------------------------------------------------
 Process the CSI by MATLAB
