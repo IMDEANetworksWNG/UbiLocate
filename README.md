@@ -19,7 +19,7 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
 - [Getting CSI by MATLAB](#getting-csi-by-matlab)
-- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)
+<!---- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)--->
 
 
 
@@ -105,17 +105,19 @@ rxs can have more than one router. Simple add more numbers at the end. Example r
 ## Getting CSI by MATLAB
 
 
-Run the follwoing mat_files:
+Run the follwoing mat_files.
+1) 1 spatial stream:
 ```
-matlab_scripts/Extract_Data/Extract_CSI.m
+matlab_scripts/Extract_Data/Extract_CSI_1.m
 ```
 
+1) 4 spatial stream:
 ```
-matlab_scripts/Extract_Data/Extract_CSI.m
+matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
-* matlab_scripts/dalibrate_data/Calibrate_CSI_Data.m to calibrate 
-the CSI. This is important because AoA won't work
 
+The csi data will be in the variable csi_data. Save it!
+<!-- 
 -----------------------------------------------------------------
 How to calibrate the data
 -----------------------------------------------------------------
@@ -160,3 +162,4 @@ sudo /etc/init.d/ntp start
 The server have to be running while the capturing CSI data
 
 
+-->
