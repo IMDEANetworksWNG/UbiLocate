@@ -110,7 +110,7 @@ Run the follwoing mat_files.
 matlab_scripts/Extract_Data/Extract_CSI_1.m
 ```
 
-1) 4 spatial stream:
+2) 4 spatial stream:
 ```
 matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
