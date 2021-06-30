@@ -61,9 +61,16 @@ These scripts automitize the extraction based on the scripts
 inside csisoftware and LEGACY160.
 
 To do that: run the following commands:
-* bash reload.sh It will load the dhd.ko module to extract CSi
-* bash config.sh It will configure the radio of the routers
 
+1) Load the dhd.ko module to extract CSi
+```
+bash reload.sh 
+```
+2) Configure the RX router. Note that nss means the number of spatial stream. Use 1 or 4
+```
+bash config.sh nss
+```
+ 
 These two scripts must be run one time, once you do a power cycle
 of the router you have to run them another time.
 
