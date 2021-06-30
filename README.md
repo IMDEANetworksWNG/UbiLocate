@@ -1,7 +1,7 @@
-**This GitHub project contains all the files needed to run UbiLocate.**
+# This GitHub project contains all the files needed to run UbiLocate.
 
 
-UbiLocate is WiFi indoor localization system that copes well with 
+UbiLocate is a WiFi indoor localization system that copes well with 
 common AP deployment densities and works ubiquitously, i.e., 
 without excessive degradation under NLOS. It is completely
 implemented on off-the-shelf 801.11ac router. You can download the paper
