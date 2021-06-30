@@ -75,14 +75,12 @@ These two scripts must be run one time, once you do a power cycle
 of the router you have to run them another time.
 
 To send packets and extract CSI, run this command:
-* bash send_collect.sh X where X is the name of the folder
-where all the pcap_files will be saved.
-
-This command will send 1000 packets, if you want to send more go to
-line 47 from send_collect.sh and change the 1000 to the number of
-packets that you want to extract. If you want to extract packet
-for a period of time or forever, plese go to LEGACY160 and create
-a new version of send.sh that continiously sends packets.
+```
+bash send_collect.sh name ss packets
+```
+where name is the name of the folder where you want to save the traces,
+ss means number of spatial streams (recommended values 1 or 4) and packets
+means the number of packets to send
 
 NOTE: Every bash file is configured with the logins and pass from
 the IMDEA setup, please change it with your configuration.
