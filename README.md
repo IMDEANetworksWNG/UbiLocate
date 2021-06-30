@@ -99,7 +99,7 @@ tx="3"
 rxs="4"
 ```
 
-rxs can have more than one router. Simple add more numbers at the end. Example rxs="4 5"
+If you want to extract CSI from more than one router. Simple add more numbers at the end. Example rxs="4 5"
 
 
 ## Getting CSI by MATLAB
