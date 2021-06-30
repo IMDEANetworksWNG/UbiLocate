@@ -83,7 +83,13 @@ ss means number of spatial streams (recommended values 1 or 4) and packets
 means the number of packets to send
 
 NOTE: Every bash file is configured with the login and pass from as imdea.
-Please change it. The variable are at the beggining of every file us and pw
+Please change it. The variable are at the beggining of every file us and pw:
+```
+# ssh logins
+us="imdea"
+ps="imdea"
+```
+
 
 -----------------------------------------------------------------
 Process the CSI by MATLAB
