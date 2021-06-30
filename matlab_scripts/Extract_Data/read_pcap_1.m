@@ -1,4 +1,4 @@
-function [cmplxall,outputArg2] = read_pcap(FILE,BW)
+function [cmplxall,outputArg2] = read_pcap_1(FILE,BW)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 HOFFSET = 16;           % header offset
