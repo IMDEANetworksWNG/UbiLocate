@@ -1,11 +1,17 @@
 #!/bin/bash
-echo "Reloading the transmitter"
-sshpass -p imdea ssh imdea@192.168.2.3 /jffs/LEGACY160/./reload.sh
 
-ASUS="4 5"
+# ssh logins
+us="imdea"
+pw="imdea"
+
+tx="3"
+rxs="4"
+echo "Reloading the transmitter"
+sshpass -p ${pw} ssh ${us}@192.168.2.${tx} /jffs/LEGACY160/./reload.sh
+
 
 echo "Reloading the receivers"
-for rx in $ASUS ; do
-  sshpass -p imdea ssh imdea@192.168.2.${rx} /jffs/csisoftware/./reload.sh
+for rx in $rxs ; do
+  sshpass -p ${pw} ssh ${us}@192.168.2.${rx} /jffs/csisoftware/./reload.sh
 done
 
