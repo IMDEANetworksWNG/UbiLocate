@@ -66,7 +66,7 @@ To do that: run the following commands:
 ```
 bash reload.sh 
 ```
-2) Configure the RX router. Note that nss means the number of spatial stream. Use 1 or 4
+2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 or 4
 ```
 bash config.sh nss
 ```
