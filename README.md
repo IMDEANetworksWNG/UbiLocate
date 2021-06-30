@@ -86,9 +86,14 @@ NOTE: Every bash file is configured with the login and pass from as imdea.
 Please change it. The variable are at the beggining of every file us and pw:
 ```
 # ssh logins
-us="imdea"
-ps="imdea"
+us="imdea" # change it
+ps="imdea" # change it
 ```
+
+NOTE: This scripts assume that the TX is 192.168.2.3 and 2 RX as 192.168.2.4 
+and 192.168.2.5. Change the number 
+
+
 
 
 -----------------------------------------------------------------
