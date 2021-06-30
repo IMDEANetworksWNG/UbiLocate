@@ -82,8 +82,8 @@ where name is the name of the folder where you want to save the traces,
 ss means number of spatial streams (recommended values 1 or 4) and packets
 means the number of packets to send
 
-NOTE1: Every bash file is configured with the login and pass from as imdea.
-Please change it. The variable are at the beggining of every file us and pw:
+NOTE1: Every bash file is configured with the login and pass as imdea.
+Please change it. The variables are at the beggining of every file us and pw:
 ```
 # ssh logins
 us="imdea" # change it
