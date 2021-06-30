@@ -93,10 +93,11 @@ ps="imdea" # change it
 
 NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
 Change the numbers:
-
+```
 # rx and tx numbers
 tx="3"
 rxs="4"
+```
 
 rxs can have more than one router. Simple add more numbers at the end. Example rxs="4 5"
 
@@ -105,8 +106,13 @@ rxs can have more than one router. Simple add more numbers at the end. Example r
 
 
 Run the follwoing mat_files:
-* matlab_scripts/Extract_Data/Extract_CSI.m to move from pcap file
-to mat_files
+```
+matlab_scripts/Extract_Data/Extract_CSI.m
+```
+
+```
+matlab_scripts/Extract_Data/Extract_CSI.m
+```
 * matlab_scripts/dalibrate_data/Calibrate_CSI_Data.m to calibrate 
 the CSI. This is important because AoA won't work
 
