@@ -39,7 +39,7 @@ data from pcap files to MATLAB files and also calibrate the CSI
 
 ## Set up the router
 
-First, you have to configure of the router by the ASUS webpage.
+First, you have to configure the router by the ASUS webpage.
 
 * Give an IP in the range of 192.168.2.X where X is the IP assigned
 by each router.
