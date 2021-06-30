@@ -25,14 +25,14 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 
 ## Files
 
-The GitHUb project contains the following subfolders:
-* csisoftware: It contais the files to configure the RX routers
+The GitHub project contains the following subfolders:
+* csisoftware: It contains the files to configure the RX routers
 * LEGACY160: It contains the files to configure the TX router
-* hardware_scripts: It contains the bas files to automatize
+* hardware_scripts: It contains the bash files to automatize
 the extraction of the CSI data. It takes the CSI from the router
 and save it in a pcap files
 * trace: It contains the pcap files
-* matlab_Scripts: It constains the scripts to extract the CSI
+* matlab_Scripts: It contains the scripts to extract the CSI
 data from pcap files to MATLAB files and also calibrate the CSI
 * mat_files: It contains the mat files, CSI data
 
