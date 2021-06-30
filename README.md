@@ -44,8 +44,7 @@ First, you have to configure of the router by the ASUS webpage.
 * Give an IP in the range of 192.168.2.X where X is the IP assigned
 by each router.
 * Enable SSH
-* Put the router in AP mode --> this is important, otherwise NTP 
-won't work
+* Put the router in AP mode 
 * Update the firmware. Update the firmware, you have it in the folder
 the name is: FW_RT-AC86U_300438215098.w
 
