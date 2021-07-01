@@ -122,7 +122,7 @@ The csi data will be in the variable csi_data. Save it!
 ## Extracting ToF
 
 First, you have to compile the .c files in cmdserver, create the executables
-and copy in your bin folder. To do everything, run these commands:
+and copy them in your bin folder. To do everything, run these commands:
 ```
 cd cmdserver-0.0.4/
 make clean
