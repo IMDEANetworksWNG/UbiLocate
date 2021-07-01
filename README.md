@@ -19,6 +19,8 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
 - [Getting CSI by MATLAB](#getting-csi-by-matlab)
+- [Extracting ToF](#extracting-tof)
+
 <!---- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)--->
 
 
@@ -116,6 +118,23 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
 
 The csi data will be in the variable csi_data. Save it!
+
+## Extracting ToF
+
+First, you have to compile the .c files in cmdserver, create the executables
+and copy in your bin folder. To do everything, run these commands:
+```
+cd cmdserver-0.0.4/
+make clean
+make
+```
+
+If no errors apper, do:
+```
+chmod +x cmdserver receivefile sendcmd sendfile
+sudo cp cmdserver receivefile sendcmd sendfile /usr/local/bin/
+```
+
 <!-- 
 -----------------------------------------------------------------
 How to calibrate the data
