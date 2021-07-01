@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$1" != "" ]; then
+  REPEAT=$1
+else
+  REPEAT=1
+fi
+
+#REPINNER=$((REPEAT/10))
+
+while [ "$REPEAT" != "0" ]; do
+  ./nexutil -I eth6 -s 505 -l 574 -f packet.dat -n 50 -t 400
+  REPEAT=$((REPEAT-1))
+done
