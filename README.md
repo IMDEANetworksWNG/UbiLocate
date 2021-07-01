@@ -54,7 +54,8 @@ the name is: FW_RT-AC86U_300438215098.w
 Once these steps are done:
 * Copy the csisoftware to the RX router inside the /jffs/
  folder
-* Copyt the LEGACY160 to the TX router inside the /jffs/ folder
+* Copy the LEGACY160 to the TX router inside the /jffs/ folder
+* Copy the tofsoftware to every router inside the /jffs/ folder
 
 ## Extracting CSI
 
