@@ -1,6 +1,0 @@
-#!/bin/sh
-
-while [ true ]; do 
-  ./manda1000.sh
-done
-
