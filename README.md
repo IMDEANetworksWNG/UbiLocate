@@ -34,7 +34,7 @@ The implementation of UbiLocate has two main parts:
 
 1) **CSI extraction**. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed to use for angle of arrival (AoA) estimation, we will explain you how to calibrate the router for AoA too. This tool can be also used for sensing since it is possible to estimate the angle of departure and the relative time delay of the paths for the CSI matrix.
 
-2) **ToF extraction**. It extracts the Time of Flight (ToF) from two or more pair of devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed.
+2) **ToF extraction**. It extracts the Time of Flight (ToF) from two or more devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed.
 
 The image below shows the router. We remove the frontal plastic panel to access to the internal antenna so that we can handle the 4 RF-chains.
 Nota that, the logical index of the CSI extractor tool correspond to the physical port as it is displayed in the image. As an example, the CSI of the first chain correspond to the rightmost physical port (1).
