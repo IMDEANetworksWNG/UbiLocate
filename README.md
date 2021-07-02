@@ -128,6 +128,8 @@ rxs="4"
 
 If you want to extract CSI from more than one router. Simple add more numbers at the end. Example rxs="4 5"
 
+## Calibrating the router
+
 
 ## Getting CSI by MATLAB
 
