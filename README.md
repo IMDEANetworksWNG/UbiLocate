@@ -75,7 +75,7 @@ bash reload.sh
 bash config.sh nss
 ```
  
-These two scripts must be run one time, once you do a power cycle
+These two scripts must be executed one time. Once you do a power cycle
 of the router you have to run them another time.
 
 To send packets and extract CSI, run this command:
