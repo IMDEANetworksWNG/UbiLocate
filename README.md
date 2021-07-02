@@ -37,6 +37,7 @@ The implementation of UbiLocate has two main parts:
 
 The image below shows the router. We remove the frontal plastic panel to access to the internal antenna so that we can handle the 4 rf chains.
 Nota that, the logical index of the CSI extractor tool correspond to the physical port as is displayed in the image. As an example, the CSI of the first chain correspond to the rightmost physical port.
+
 <img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="600" height="300">
 
 
