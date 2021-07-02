@@ -128,9 +128,6 @@ rxs="4"
 
 If you want to extract CSI from more than one router. Simple add more numbers at the end. Example rxs="4 5"
 
-## Calibrating the router
-
-
 ## Getting CSI by MATLAB
 
 
@@ -146,6 +143,9 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
 
 The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
+
+
+## Calibrating the router
 
 ## Extracting the path parameters by MATLAB
 
