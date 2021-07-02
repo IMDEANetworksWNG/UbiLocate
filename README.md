@@ -155,6 +155,7 @@ To calibrate the data, there is an example. Just execute in MATLAB UbiLocate/mat
 
 ## Extracting the path parameters by MATLAB
 
+We make public the algorithm for estimating the path parameters. This algorithm corresponds to the one explained in Section 2.2 Angle estimation. There is an example. Execute UbiLocate/matlab_scripts/Extract_Path_Parameters/Handle_Decompose_2D.m 
 
 ## Extracting ToF
 
