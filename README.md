@@ -70,7 +70,7 @@ To do that: run the following commands:
 ```
 bash reload.sh 
 ```
-2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4) or 4 (4x4)
+2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4 MIMO) or 4 (4x4 MIMO)
 ```
 bash config.sh nss
 ```
