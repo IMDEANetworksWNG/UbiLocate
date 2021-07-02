@@ -32,7 +32,7 @@ be able to configure and extract the CSI for every configuration.
 
 The implementation of UbiLocate has two main parts:
 
-1) **CSI extraction**. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed to use for angle of arrival (AoA) estimation, we will explain you how to calibrate the router for AoA too. This tool can be use use for sensing since the CSI extractor tool can be also to estimate the angle of departure and the relative time delay of the paths.
+1) **CSI extraction**. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed to use for angle of arrival (AoA) estimation, we will explain you how to calibrate the router for AoA too. This tool can be also used for sensing since it is possible to estimate the angle of departure and the relative time delay of the paths for the CSI matrix.
 
 2) **ToF extraction**. It extracts the Time of Flight (ToF) from two or more pair of devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed.
 
@@ -140,7 +140,7 @@ matlab_scripts/Extract_Data/Extract_CSI_1.m
 matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
 
-The csi data will be in the variable csi_data. Save it!
+The csi data will be in the variable csi_data, it has a size of Number of packets time number of subcarriers times number of antennas at the receiver times number of spatial strems. Please, save the variable for future purposes.
 
 ## Extracting ToF
 
