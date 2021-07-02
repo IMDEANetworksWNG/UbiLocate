@@ -140,7 +140,7 @@ matlab_scripts/Extract_Data/Extract_CSI_1.m
 matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
 
-The csi data will be in the variable csi_data, it has a size of Number of packets time number of subcarriers times number of antennas at the receiver times number of spatial strems. Please, save the variable for future purposes.
+The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
 
 ## Extracting ToF
 
