@@ -2,7 +2,7 @@ close all
 clc
 clear
 
- grid_toa = [-122, -121, -120, -119, -118, -117, -116, -115, -114, -113, -112, -111, -110, ...
+ grid_subcarriers = [-122, -121, -120, -119, -118, -117, -116, -115, -114, -113, -112, -111, -110, ...
 -109, -108, -107, -106, -105, -104, -102, -101, -100, -99, -98, -97, -96, -95, ...
 -94, -93, -92, -91, -90, -89, -88, -87, -86, -85, -84, -83, -82, -81, -80, -79, ...
 -78, -77, -76, -74, -73, -72, -71, -70, -69, -68, -67, -66, -65, -64, -63, -62, ...
@@ -18,46 +18,40 @@ clear
 122];
 
 
-folders = ["calibration";"test"];
-
-routers = string([4 5]);
-
-for id_folder = 1:length(folders)
-    for id_router = 1:length(routers)
-
-
-        % load the template
-        load(strcat("../../mat_files/",folders(id_folder),"/csi_data_",routers(id_router),".mat"))
-
-
-        % take the first packet
-        csi_template = squeeze(csi_data(1,:,:));
-        csi_template = csi_template(grid_toa + 256/2 + 1,:);
-        % load the csi data to be calibrated
-        load(strcat("../../mat_files/",folders(id_folder),"/csi_data_",routers(id_router),".mat"));
-
-        % calibrate and save
-        [snapshots, K, N] = size(csi_data);
-
-        % remove non-active subcarriers
-        csi_data = csi_data(:,grid_toa + 256/2 + 1,:);
-
-        % calibrate the data. Apply the de-convolution and set the absolute
-        % value to 1
-        for rx_id = 1:N
-            csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ squeeze(csi_template(:,rx_id)).';
-            csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ mean(abs(squeeze(csi_data(:,:,rx_id))),2);
-        end
-
-        % put nans to the non-active subcarriers
-        csi_data_aux = nan(snapshots,K,N);
-        csi_data_aux(:,grid_toa + (K/2) + 1,:) = csi_data;
-        csi_data = csi_data_aux;
-
-        % save it
-        save(strcat("../../mat_files/",folders(id_folder),"/csi_data_calibrated_", routers(id_router)), "csi_data");
 
 
 
-    end
+% load the template
+load("calibration/csi_data.mat")
+
+% calibrate and save
+[~, K, ~] = size(csi_data);
+
+% take the first packet
+csi_template = squeeze(csi_data(1,:,:));
+csi_template = csi_template(grid_subcarriers + K/2 + 1,:);
+
+% load the csi data to be calibrated
+load("test/csi_data.mat");
+
+% calibrate and save
+[snapshots, K, N] = size(csi_data);
+
+% remove non-active subcarriers
+csi_data = csi_data(:,grid_subcarriers + K/2 + 1,:);
+
+% calibrate the data. Apply the de-convolution and set the absolute
+% value to 1
+for rx_id = 1:N
+    csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ squeeze(csi_template(:,rx_id)).';
+    csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ mean(abs(squeeze(csi_data(:,:,rx_id))),2);
 end
+
+% put nans to the non-active subcarriers
+csi_data_aux = nan(snapshots,K,N);
+csi_data_aux(:,grid_subcarriers + (K/2) + 1,:) = csi_data;
+csi_data = csi_data_aux;
+
+% save it
+save("test/csi_data_calibrated", "csi_data");
+
