@@ -18,6 +18,9 @@ clear
 122];
 
 
+
+
+
 % load the template
 load("calibration/csi_data.mat")
 
@@ -37,7 +40,7 @@ load("test/csi_data.mat");
 % remove non-active subcarriers
 csi_data = csi_data(:,grid_subcarriers + K/2 + 1,:);
 
-% calibrate the data. Apply the de-convolution and divide by the mean
+% calibrate the data. Apply the de-convolution and div
 for rx_id = 1:N
     csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ squeeze(csi_template(:,rx_id)).';
     csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ mean(abs(squeeze(csi_data(:,:,rx_id))),2);
