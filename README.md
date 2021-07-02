@@ -42,7 +42,7 @@ data from pcap files to MATLAB files and also calibrate the CSI
 * tofsoftware: It contains the files to configure the router for ToF
 
 # Getting started
-<img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="100" height="100">
+<img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="600" height="300">
 
 
 ## Set up the router
