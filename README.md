@@ -43,7 +43,7 @@ data from pcap files to MATLAB files and also calibrate the CSI
 
 # Getting started
 
-![alt text](https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg?raw=true)
+![alt text](https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg?raw=true | width=100)
 
 
 ## Set up the router
