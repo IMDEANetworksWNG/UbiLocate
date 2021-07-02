@@ -15,8 +15,8 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 
 ## Table of content
 
-- [Files](#files)
 - [Getting started](#gettingstarted)
+<!----- [Files](#files)--->
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
 - [Getting CSI by MATLAB](#getting-csi-by-matlab)
@@ -25,7 +25,22 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 <!---- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)--->
 
 
+# Getting started
 
+UbiLocate uses the ASUS RT-AC86U. It can support up to 4x4 MIMO with 80MHz of BW. Following the instruction below, you will 
+be able to configure and extract the CSI for every configuration. 
+
+The implementation of UbiLocate has two main parts:
+
+1) CSI extraction. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed to use for angle of arrival (AoA) estimation, we will explain you how to calibrate the router for AoA too.
+2) ToF extraction. It extracts the Time of Flight (ToF) from two or more pair of devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed.
+
+The image below shows the router. We remove the frontal plastic panel to access to the internal antenna so that we can handle the 4 rf chains.
+Nota that, the logical index of the CSI extractor tool correspond to the physical port as is displayed in the image. As an example, the CSI of the first chain correspond to the rightmost physical port.
+<img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="600" height="300">
+
+
+<!-- 
 ## Files
 
 
@@ -40,9 +55,8 @@ and save it in a pcap files
 data from pcap files to MATLAB files and also calibrate the CSI
 * mat_files: It contains the mat files, CSI data
 * tofsoftware: It contains the files to configure the router for ToF
+-->
 
-# Getting started
-<img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="600" height="300">
 
 
 ## Set up the router
