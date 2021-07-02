@@ -147,6 +147,12 @@ The csi data will be in the variable csi_data, it has a size of (Number of Packe
 
 ## Calibrating the router
 
+In order to correctly estimate AoA and AoD, you need to calibrate the data. To do so, you have to collect a reference CSI. This reference CSI has to be taken by cables with TX and RX devices that you are going to use for extracting AoA and AoD. To do so, connect every TX port to each input of a 4-way combiner, the output of the combiner to the input of the splitter and every the output of the splitter to every RX port. With this configuration, you can connect all the TX port with all the RX port. Maybe you have to separate this into subgroup of TX and RX ports. If you use you one spatial stream, just connect the TX port to the input of the splitter.
+
+Once, you have taken the reference CSI. Disconnect all the cables to the splitter/combiner, connect to the antennas and collect the measurements that you will use for estimating AoA and AoD. If the setup is modified, the calibration won't work. 
+
+To calibrate the data, there is an example. Just execute in MATLAB UbiLocate/matlab_scripts/calibrate_data/Calibrate_CSI_Data.m
+
 ## Extracting the path parameters by MATLAB
 
 
