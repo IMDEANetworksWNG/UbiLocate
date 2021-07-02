@@ -27,6 +27,8 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 
 ## Files
 
+![alt text](https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg?raw=true)
+
 The GitHub project contains the following subfolders:
 * csisoftware: It contains the files to configure the RX routers for CSI
 * LEGACY160: It contains the files to configure the TX router for CSI
