@@ -19,7 +19,9 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
 - [Getting CSI by MATLAB](#getting-csi-by-matlab)
+- [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 - [Extracting ToF](#extracting-tof)
+
 <!----- [Files](#files)--->
 
 <!---- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)--->
@@ -32,7 +34,7 @@ be able to configure and extract the CSI for every configuration.
 
 The implementation of UbiLocate has two main parts:
 
-1) **CSI extraction**. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed to use for angle of arrival (AoA) estimation, we will explain you how to calibrate the router for AoA too. This tool can be also used for sensing since it is possible to estimate the angle of departure and the relative time delay of the paths for the CSI matrix.
+1) **CSI extraction**. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed to use for angle of arrival (AoA) estimation and angle of departure (AoD). We will explain you how to calibrate the router for AoA/AoD too. This tool can be also used for sensing since it is possible to estimate the path parameters of a WiFi MIMO system (AoA + AoD + path length). Look at [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 
 2) **ToF extraction**. It extracts the Time of Flight (ToF) from two or more devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed.
 
@@ -141,6 +143,9 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 ```
 
 The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
+
+## Extracting the path parameters by MATLAB
+
 
 ## Extracting ToF
 
