@@ -16,6 +16,7 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 ## Table of content
 
 - [Files](#files)
+- [Getting started](#gettingstarted)
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
 - [Getting CSI by MATLAB](#getting-csi-by-matlab)
@@ -27,7 +28,6 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 
 ## Files
 
-![alt text](https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg?raw=true)
 
 The GitHub project contains the following subfolders:
 * csisoftware: It contains the files to configure the RX routers for CSI
@@ -40,6 +40,10 @@ and save it in a pcap files
 data from pcap files to MATLAB files and also calibrate the CSI
 * mat_files: It contains the mat files, CSI data
 * tofsoftware: It contains the files to configure the router for ToF
+
+# Getting started
+
+![alt text](https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg?raw=true)
 
 
 ## Set up the router
