@@ -16,11 +16,11 @@ to take a look at the full presentation [on TouTube](https://www.youtube.com/wat
 ## Table of content
 
 - [Getting started](#gettingstarted)
-<!----- [Files](#files)--->
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
 - [Getting CSI by MATLAB](#getting-csi-by-matlab)
 - [Extracting ToF](#extracting-tof)
+<!----- [Files](#files)--->
 
 <!---- [Enabling NTP on a linux server](#enabling-ntp-on-a-linux-server)--->
 
