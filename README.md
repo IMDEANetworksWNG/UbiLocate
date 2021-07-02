@@ -126,7 +126,7 @@ tx="3"
 rxs="4"
 ```
 
-If you want to extract CSI from more than one router. Simple add more numbers at the end. Example rxs="4 5"
+If extracting CSI from more than one router is needed, just simple add more numbers at the end. Example rxs="4 5"
 
 ## Getting CSI by MATLAB
 
@@ -147,9 +147,9 @@ The csi data will be in the variable csi_data, it has a size of (Number of Packe
 
 ## Calibrating the router
 
-In order to correctly estimate AoA and AoD, you need to calibrate the CSI data. To do so, you have to collect a reference CSI. This reference CSI has to be taken by cables with the exact TX and RX devices that you are going to use for extracting AoA and AoD. To do so, connect every TX port to each input of a 4-way combiner, the output of the combiner to the input of the 4-way splitter and every the output of the splitter to every RX port. With this configuration, you can connect all the TX port with all the RX port. Maybe you have to separate this into subgroups of TX and RX ports. If you use you one spatial stream, just connect the TX port to the input of the splitter.
+In order to correctly estimate AoA and AoD, the CSI data has to be calibrated. To do so, collect a reference CSI. This reference CSI has to be taken by cables with the exact TX and RX devices that are going to use for extracting AoA and AoD. To do so, connect every TX port to each input of a 4-way combiner, the output of the combiner to the input of the 4-way splitter and every the output of the splitter to every RX port. With this configuration, you can connect all the TX port with all the RX port. Maybe it is needed to separate this into subgroups of TX and RX ports. If one spatial stream is used, just connect the TX port to the input of the splitter.
 
-Once, you have taken the reference CSI. Disconnect all the cables to the splitter/combiner, connect to the antennas and collect the measurements that you will use for estimating AoA and AoD. If the setup is modified, the calibration won't work. In addition, the calibration only works while the routers are on, if you do a power cycle you will lost the calibration. 
+Once, the reference CSI is taken. Disconnect all the cables to the splitter/combiner, connect to the antennas and collect the measurements that will use for estimating AoA and AoD later. If the setup is modified, the calibration won't work. In addition, the calibration only works while the routers are on, a power cycle will change the physical configuration and the calibration will be lost.
 
 To calibrate the data, there is an example. Just execute in MATLAB UbiLocate/matlab_scripts/calibrate_data/Calibrate_CSI_Data.m.
 
