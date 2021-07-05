@@ -11,18 +11,32 @@ fi
 
 cd "$(dirname "$0")"
 
-ASUS="171 172 173 174 175"
+
+ASUS="3 4"
 
 echo "starting"
 
+lastdev=${ASUS: -1}
 for each in $ASUS ; do
-  sendcmd -s 172.16.1.$each -p 30000 -c "/jffs/real_time_aod/./gong_2.sh"
+  if [ $each = $lastdev ];
+  then
+    sendcmd -s 192.168.2.$each -p 30000 -c "/jffs/tofsoftware/./starttxrx80fastng.sh" 
+  else
+    sendcmd -s 192.168.2.$each -p 30000 -c "/jffs/tofsoftware/./starttxrx80fastng.sh" &
+  fi
 done
 
-sendcmd -s 192.168.2.3 -p 30000 -c "/jffs/real_time_aod/./gong_2.sh"
+mkdir traces
+mkdir traces/${folder}
+for each in $ASUS ; do
+  sshpass -p imdea scp imdea@192.168.2.${each}:/tmp/trace${each}.pcap traces/${folder}/trace${each}.pcap
+done
 
-sleep 5 
 
-bash kill_process.sh
+#sendcmd -s 192.168.2.3 -p 30000 -c "/jffs/real_time_aod/./gong_2.sh"
 
-bash copy_traces.sh ${folder}
+#sleep 5 
+
+#bash kill_process.sh
+
+#bash copy_traces.sh ${folder}

@@ -1,19 +1,13 @@
 #!/bin/bash
-echo "Reloading the router 4"
-sshpass -p imdea ssh imdea@172.16.1.172 /jffs/real_time_aod/./reload.sh
 
-echo "Reloading the router 5"
-sshpass -p imdea ssh imdea@172.16.1.173 /jffs/real_time_aod/./reload.sh
+# ssh logins
+us="imdea"
+pw="imdea"
 
-echo "reloading the router 6"
-sshpass -p imdea ssh imdea@172.16.1.174 /jffs/real_time_aod/./reload.sh
+devs="3 4"
 
-echo "reloading the router 7"
-sshpass -p imdea ssh imdea@172.16.1.175 /jffs/real_time_aod/./reload.sh
-
-echo "Reloading the router 3"
-sshpass -p imdea ssh imdea@192.168.2.3 /jffs/real_time_aod/./reload.sh
-
-echo "Reloading the router 10"
-sshpass -p imdea ssh imdea@172.16.1.171 /jffs/real_time_aod/./reload.sh
+echo "Reloading the devices"
+for dev in $devs ; do
+  sshpass -p ${pw} ssh ${us}@192.168.2.${dev} /jffs/tofsoftware/./reload.sh
+done
 
