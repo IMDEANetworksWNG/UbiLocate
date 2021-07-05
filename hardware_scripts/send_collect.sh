@@ -29,6 +29,13 @@ if [ "$pkts" = "" ]; then
   exit 1
 fi
 
+bw=$4
+
+if [ "$bw" = "" ]; then
+  echo "Missing the BW"
+  exit 1
+fi
+
 
 
 # go to the current directory
@@ -56,7 +63,7 @@ done
 # sleep just in case
 sleep 2  
 
-# send 1000 wifi 80MHz packets with 1 spatial stream
+# send the # of packets with BW and number of spatial streams 
 echo "Sending"
 sshpass -p ${pw} ssh ${us}@192.168.2.${tx} /jffs/LEGACY160/./send.sh 80 ${nss} ${pkts}
 

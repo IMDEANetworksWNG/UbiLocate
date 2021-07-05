@@ -16,6 +16,20 @@ if [ "$nss" = "" ]; then
   exit 1
 fi
 
+ch=$2
+
+if [ "$ch" = "" ]; then
+  echo "Missing the channel"
+  exit 1
+fi
+
+bw=$3
+
+if [ "$bw" = "" ]; then
+  echo "Missing the BW"
+  exit 1
+fi
+
 
 case $nss in
 1)
@@ -37,13 +51,9 @@ case $nss in
   ;;
 esac
 
-echo $nss_mask
 
 echo "Setting up the transmitter"
 sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /jffs/LEGACY160/./configcsi.sh 157 80 
-
-txchains="0x"${nss_mask}
-echo $txchains
 
 sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 txchain $txchains
 echo "Setting up the receiver"
@@ -54,10 +64,12 @@ for rx in $rxs ; do
 done
 
 
+echo "Setting the channel and BW"
 
-echo "Setting the chanspec just in case"
-sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 chanspec 157/80 
+echo ${ch}/${bw}
+
+sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 chanspec ${ch}/${bw}
 for rx in $rxs ; do
-  sshpass -p ${ps} ssh ${us}@192.168.2.${rx} /usr/sbin/wl -i eth6 chanspec 157/80
+  sshpass -p ${ps} ssh ${us}@192.168.2.${rx} /usr/sbin/wl -i eth6 chanspec ${ch}/${bw}
 done
 
