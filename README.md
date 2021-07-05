@@ -94,9 +94,9 @@ To do that: run the following commands:
 ```
 bash reload.sh 
 ```
-2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4 MIMO) or 4 (4x4 MIMO)
+2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4 MIMO) or 4 (4x4 MIMO). Channel means the 11ac channel and bw is the BW. For more information please take a look at [here](https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/j/n/ac/ax)). Recommended channel and BW 157 and 80.
 ```
-bash config.sh nss
+bash config.sh nss ch bw
 ```
  
 These two scripts must be executed one time. Once you do a power cycle
@@ -104,11 +104,11 @@ of the router you have to run them another time.
 
 To send packets and extract CSI, run this command:
 ```
-bash send_collect.sh name ss packets
+bash send_collect.sh name ss packets bw
 ```
 where name is the name of the folder where you want to save the traces,
-ss means number of spatial streams (recommended values 1 or 4) and packets
-means the number of packets to send
+ss means number of spatial streams (recommended values 1 or 4), packets
+means the number of packets to send and bw is the bandwith. 
 
 NOTE1: Every bash file is configured with the login and pass as imdea.
 Please change it. The variables are at the beggining of every file us and pw:
