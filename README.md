@@ -163,7 +163,7 @@ We make public the algorithm for estimating the path parameters, Decompose. This
 
 ## Extracting ToF
 
-UNDER CONSTRUCTION. Stay tune! I will update it in a couple of days
+**UNDER CONSTRUCTION. Stay tune! I will update it in a couple of days**
 
 First, you have to compile the .c files in cmdserver, create the executables
 and copy them in your bin folder. To do everything, run these commands:
