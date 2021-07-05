@@ -94,7 +94,7 @@ To do that: run the following commands:
 ```
 bash reload.sh 
 ```
-2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4 MIMO) or 4 (4x4 MIMO). Channel means the 11ac channel and bw is the BW. For more information please take a look at [here](https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/j/n/ac/ax)). Recommended channel and BW 157 and 80.
+2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4 MIMO) or 4 (4x4 MIMO). Channel means the 11ac channel and bw is the BW im MHz. For more information please take a look at [here](https://en.wikipedia.org/wiki/List_of_WLAN_channels#5_GHz_(802.11a/h/j/n/ac/ax)). Recommended channel and BW 157 and 80.
 ```
 bash config.sh nss ch bw
 ```
@@ -131,7 +131,7 @@ If extracting CSI from more than one router is needed, just simple add more numb
 ## Getting CSI by MATLAB
 
 
-Run the follwoing mat_files (change the BW): 
+Run the follwoing mat_files (change the BW if it is not 80): 
 1) 1 spatial stream:
 ```
 matlab_scripts/Extract_Data/Extract_CSI_1.m
