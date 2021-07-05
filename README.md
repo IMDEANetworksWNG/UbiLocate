@@ -131,7 +131,7 @@ If extracting CSI from more than one router is needed, just simple add more numb
 ## Getting CSI by MATLAB
 
 
-Run the follwoing mat_files.
+Run the follwoing mat_files (change the BW): 
 1) 1 spatial stream:
 ```
 matlab_scripts/Extract_Data/Extract_CSI_1.m
