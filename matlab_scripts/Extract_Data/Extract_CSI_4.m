@@ -15,18 +15,15 @@ BW = 80;                % bandwidth
 ss = 4;
 N = 4;
 
-index_set = ["test_4ss"]
-
-
 
 
 FILE = strcat("../../traces/test_4ss/./trace4.pcap");
 
-[cmplxall_raw_all] = read_pcap_4(FILE);
+[cmplxall_raw_all] = read_pcap_4(FILE,BW);
 
-[packets,~,~,~] = size(cmplxall_raw_all);
+[packets,K,~] = size(cmplxall_raw_all);
 
-csi_data = zeros(packets,256,N,ss);
+csi_data = zeros(packets,K,N,ss);
 
 for jj = 1:packets
     for ii = 1:N

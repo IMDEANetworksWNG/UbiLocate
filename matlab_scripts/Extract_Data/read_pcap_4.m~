@@ -103,7 +103,7 @@ prevfwmask = fwmask;
 
 % if we have enough data for this packet process everything
 if processedmask == mask_toprocess,
-  cmplxall = zeros([NFFT mask_toprocess]);
+  cmplxall = zeros([256 mask_toprocess]);
   cmplxall_raw = zeros([NFFT mask_toprocess]);
 
   % extract CSI

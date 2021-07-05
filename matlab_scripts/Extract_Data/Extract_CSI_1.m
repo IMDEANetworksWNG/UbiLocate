@@ -23,8 +23,6 @@ end;
 BW = 80;                % bandwidth
 
 
-folders = ["test_1"];
-
 
 FILE = strcat("../../traces/test_1ss/trace4.pcap");% capture file
 % FILE = './trace.pcap';% capture file
