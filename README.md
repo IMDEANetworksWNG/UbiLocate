@@ -171,7 +171,7 @@ make clean
 make
 ```
 
-If no errors apper, do:
+If no errors appear, do:
 ```
 chmod +x cmdserver receivefile sendcmd sendfile
 sudo cp cmdserver receivefile sendcmd sendfile /usr/local/bin/
