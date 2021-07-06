@@ -7,8 +7,7 @@ without excessive degradation under NLOS. It is completely
 implemented on off-the-shelf 801.11ac router. You can download the paper
 from [here](https://eprints.networks.imdea.org/2318/1/main.pdf)
 
-UbiLocate was presented at MobiSys 2021 and we kindly invite you
-to take a look at the full presentation [on TouTube](https://www.youtube.com/watch?v=ULfg9MV4ymQ)
+UbiLocate was presented at MobiSys 2021
 
 
 ### You can find all the details about running UbiLocate below
