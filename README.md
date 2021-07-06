@@ -162,7 +162,7 @@ We make public the algorithm for estimating the path parameters, Decompose. This
 
 ## Extracting ToF
 
-**UNDER CONSTRUCTION. Stay tune! I will update it in a couple of days**
+This part extract the ToF for every pair of devices as explained in the paper 3.3 Implementation of the FTM procedure. Every device sends broadcast packets asynchronously every 4ms (if possible). This part is configured to send SISO packets, but it send 4x4 MIMO so that computing AoA and AoD at the same time that ToF is also possible. 
 
 First, you have to compile the .c files in cmdserver, create the executables
 and copy them in your bin folder. To do everything, run these commands:
@@ -199,6 +199,8 @@ UbiLocate/matlab_scripts/Extract_ToF/Compute_ToF_music.m
 ```
 
 The output is the ToF.
+
+The CSI data for the full MIMO are saved in the variable csi_storeA
 
 <!-- 
 -----------------------------------------------------------------
