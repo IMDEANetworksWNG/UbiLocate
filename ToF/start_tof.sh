@@ -26,17 +26,10 @@ for each in $ASUS ; do
   fi
 done
 
+# save the traces
 mkdir traces
 mkdir traces/${folder}
 for each in $ASUS ; do
   sshpass -p imdea scp imdea@192.168.2.${each}:/tmp/trace${each}.pcap traces/${folder}/trace${each}.pcap
 done
 
-
-#sendcmd -s 192.168.2.3 -p 30000 -c "/jffs/real_time_aod/./gong_2.sh"
-
-#sleep 5 
-
-#bash kill_process.sh
-
-#bash copy_traces.sh ${folder}
