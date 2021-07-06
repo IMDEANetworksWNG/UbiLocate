@@ -177,6 +177,19 @@ If no errors appear, do:
 chmod +x cmdserver receivefile sendcmd sendfile
 sudo cp cmdserver receivefile sendcmd sendfile /usr/local/bin/
 ```
+As for extractig the CSI, go to ToF and run these files:
+```
+bash reload.sh 
+bash config.sh
+bash start_cmd.sh
+```
+
+To extract the timestamps and the CSI, run this:
+```
+bash start_tof.sh name
+```
+where name is the name of the folder where the pcap files will be saved.
+
 
 <!-- 
 -----------------------------------------------------------------
