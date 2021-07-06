@@ -188,8 +188,7 @@ To extract the timestamps and the CSI, run this:
 ```
 bash start_tof.sh name
 ```
-where name is the name of the folder where the pcap files will be saved. This will run the FTM-like protocol for every device until everyone recieved 1000 packets. 
-
+where name is the name of the folder where the pcap files will be saved. By default, all the routers are transmitting until they collected 1000 packets at tcpdump.
 
 Once this is done, the tof can be extracted by MATLAB. To do so:
 
