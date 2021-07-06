@@ -190,6 +190,23 @@ bash start_tof.sh name
 ```
 where name is the name of the folder where the pcap files will be saved. By default, all the routers are transmitting until they collected 1000 packets at tcpdump.
 
+NOTE1: Every bash file is configured with the login and pass as imdea.
+Please change it. The variables are at the beggining of every file us and pw:
+```
+# ssh logins
+us="imdea" # change it
+ps="imdea" # change it
+```
+
+NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+Change the numbers:
+```
+# rx and tx numbers
+tx="3"
+rxs="4"
+```
+
+
 Once this is done, the tof can be extracted by MATLAB. To do so:
 
 ```
