@@ -188,8 +188,17 @@ To extract the timestamps and the CSI, run this:
 ```
 bash start_tof.sh name
 ```
-where name is the name of the folder where the pcap files will be saved.
+where name is the name of the folder where the pcap files will be saved. This will run the FTM-like protocol for every device until everyone recieved 1000 packets. 
 
+
+Once this is done, the tof can be extracted by MATLAB. To do so:
+
+```
+UbiLocate/matlab_scripts/Extract_ToF/Save_Data.m
+UbiLocate/matlab_scripts/Extract_ToF/Compute_ToF_music.m
+```
+
+The output is the ToF.
 
 <!-- 
 -----------------------------------------------------------------
