@@ -43,10 +43,10 @@ case $nss in
   nss_mask=7
   ;;
 4)
-  nss_mask=f
+  nss_mask=15
   ;;
 *)
-  echo "Invalid bandwitdh"
+  echo "Invalid spatial streams"
   exit 1
   ;;
 esac
@@ -55,7 +55,7 @@ esac
 echo "Setting up the transmitter"
 sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /jffs/LEGACY160/./configcsi.sh 157 80 
 
-sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 txchain $txchains
+sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 txchain $nss_mask
 echo "Setting up the receiver"
 
 for rx in $rxs ; do
