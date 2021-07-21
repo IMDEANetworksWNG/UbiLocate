@@ -71,8 +71,7 @@ First, you have to configure the router by the ASUS webpage.
 by each router.
 * Enable SSH
 * Put the router in AP mode 
-* Update the firmware. The firmware is
-the name is: FW_RT-AC86U_300438215098.w. To do so, follow the instruction in the [link](https://www.asus.com/support/FAQ/1008000/#a2), follow Method 2: Update Manually
+* Update the firmware. The firmware is: FW_RT-AC86U_300438215098.w. To do so, follow the instruction in the [link](https://www.asus.com/support/FAQ/1008000/#a2), follow Method 2: Update Manually
 
 
 Once these steps are done:
