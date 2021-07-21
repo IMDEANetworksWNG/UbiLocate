@@ -117,7 +117,7 @@ us="imdea" # change it
 ps="imdea" # change it
 ```
 
-NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+NOTE2: These scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
 Change the numbers:
 ```
 # rx and tx numbers
@@ -198,13 +198,14 @@ us="imdea" # change it
 ps="imdea" # change it
 ```
 
-NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+NOTE2: These scripts assume that the there are one pair of routers 192.168.2.3 and 192.168.2.4.
 Change the numbers:
 ```
-# rx and tx numbers
-tx="3"
-rxs="4"
+ASUS="3 4"
 ```
+
+If extracting ToF from more than one pair router is needed, just simple add more numbers at the end. Example ASUS="3 4 5"
+
 
 
 Once this is done, the tof can be extracted by MATLAB. To do so:
