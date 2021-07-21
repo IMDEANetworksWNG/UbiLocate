@@ -36,10 +36,10 @@ The implementation of UbiLocate has two main parts:
 
 1) **CSI extraction**. It extracts the CSI of IEEE 802.11ac frames. This part is mainly designed for estimating the angle of arrival (AoA) and angle of departure (AoD) plus the relative time delay between paths. We will explain how to calibrate the router for AoA/AoD too at [Calibrating the router](#calibrating-the-router). Once, the router is calibrated, the path parameters can be extracted (AoA/AoD/Path length), look at [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 
-2) **ToF extraction**. It extracts the Time of Flight (ToF) from two or more devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed. This implemetation also extracts a full MIMO CSi matrix every 32 packets, so that AoA and AoD can be also extracted.
+2) **ToF extraction**. It extracts the Time of Flight (ToF) from two or more devices. It gets the timestamps when the packets are received and sent so that the ToF can be computed, look at [Extracting ToF](#extracting-tof). This implemetation also extracts a full MIMO CSi matrix every 32 packets, so that AoA and AoD can be also extracted.
 
 The image below shows the router. We remove the frontal plastic panel to access to the internal antenna so that we can handle the 4 RF-chains.
-Nota that, the logical index of the CSI extractor tool correspond to the physical port as it is displayed in the image. As an example, the CSI of the first chain correspond to the rightmost physical port (1). **When connecting the physical ports to the antennas of array, connect them in order. The port 1 to the rightmost antenna, the port 2 to the second rightmost antenna an so on.**
+Nota that, the logical index of the CSI extractor tool correspond to the physical port as it is displayed in the image. As an example, the CSI of the first chain correspond to the rightmost physical port (1). **When connecting the physical ports to the antennas of the array, connect them in order. The port 1 to the rightmost antenna, the port 2 to the second rightmost antenna an so on.**
 
 <img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="600" height="300">
 
@@ -117,7 +117,7 @@ us="imdea" # change it
 ps="imdea" # change it
 ```
 
-NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+NOTE2: These scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
 Change the numbers:
 ```
 # rx and tx numbers
@@ -198,13 +198,14 @@ us="imdea" # change it
 ps="imdea" # change it
 ```
 
-NOTE2: This scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+NOTE2: These scripts assume that the there is one pair of routers 192.168.2.3 and 192.168.2.4.
 Change the numbers:
 ```
-# rx and tx numbers
-tx="3"
-rxs="4"
+ASUS="3 4"
 ```
+
+If extracting ToF from more than one pair router is needed, just simple add more numbers at the end. Example ASUS="3 4 5"
+
 
 
 Once this is done, the tof can be extracted by MATLAB. To do so:
@@ -216,7 +217,7 @@ UbiLocate/matlab_scripts/Extract_ToF/Compute_ToF_music.m
 
 The output is the ToF.
 
-The CSI data for the full MIMO are saved in the variable csi_storeA
+The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
 <!-- 
 -----------------------------------------------------------------
