@@ -251,4 +251,4 @@ end;
 clight = 3e8;
 
 lengthABs = ((tofAB) - tof8meter) * clight + dist0;
-lengthAB_median = median(lengthABs)
+ToF = median(lengthABs)
