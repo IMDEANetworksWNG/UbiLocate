@@ -204,7 +204,7 @@ Change the numbers:
 ASUS="3 4"
 ```
 
-If extracting ToF from more than one pair router is needed, just simple add more numbers at the end. Example ASUS="3 4 5"
+If extracting ToF from more than one pair of routers is needed, just simple add more numbers at the end. Example ASUS="3 4 5"
 
 
 
