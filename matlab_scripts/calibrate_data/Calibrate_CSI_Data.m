@@ -21,31 +21,36 @@ clear
 % load the template
 load("calibration/csi_data.mat")
 
+
 % calibrate and save
-[~, K, ~] = size(csi_data);
+[~, K, ~, ~] = size(csi_data);
 
 % take the first packet
-csi_template = squeeze(csi_data(1,:,:));
-csi_template = csi_template(grid_subcarriers + K/2 + 1,:);
+csi_template = squeeze(csi_data(1,:,:,:));
+csi_template = csi_template(grid_subcarriers + K/2 + 1,:,:);
 
 % load the csi data to be calibrated
 load("test/csi_data.mat");
 
-% calibrate and save
-[snapshots, K, N] = size(csi_data);
+% calibrate and save.
+% Note that snapshots means # of received packets, K means #, N means # of
+% RX antennas and M # means of TX antennas
+[snapshots, K, N, M] = size(csi_data);
 
 % remove non-active subcarriers
-csi_data = csi_data(:,grid_subcarriers + K/2 + 1,:);
+csi_data = csi_data(:,grid_subcarriers + K/2 + 1,:,:);
 
 % calibrate the data. Apply the de-convolution and divide by the mean
 for rx_id = 1:N
-    csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ squeeze(csi_template(:,rx_id)).';
-    csi_data(:,:,rx_id) = squeeze(csi_data(:,:,rx_id))./ mean(abs(squeeze(csi_data(:,:,rx_id))),2);
+    for tx_id = 1:M
+        csi_data(:,:,rx_id,tx_id) = squeeze(csi_data(:,:,rx_id,tx_id))./ squeeze(csi_template(:,rx_id,tx_id)).'; 
+        csi_data(:,:,rx_id,tx_id) = squeeze(csi_data(:,:,rx_id,tx_id))./ mean(abs(squeeze(csi_data(:,:,rx_id,tx_id))),2);
+    end
 end
 
 % put nans to the non-active subcarriers
-csi_data_aux = nan(snapshots,K,N);
-csi_data_aux(:,grid_subcarriers + (K/2) + 1,:) = csi_data;
+csi_data_aux = nan(snapshots,K,N,M);
+csi_data_aux(:,grid_subcarriers + (K/2) + 1,:,:) = csi_data;
 csi_data = csi_data_aux;
 
 % save it
