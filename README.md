@@ -198,7 +198,7 @@ us="imdea" # change it
 ps="imdea" # change it
 ```
 
-NOTE2: These scripts assume that the there is one pair of routers 192.168.2.3 and 192.168.2.4.
+NOTE2: These scripts assume that there is one pair of routers 192.168.2.3 and 192.168.2.4.
 Change the numbers:
 ```
 ASUS="3 4"
