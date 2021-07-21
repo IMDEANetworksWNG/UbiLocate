@@ -215,7 +215,7 @@ UbiLocate/matlab_scripts/Extract_ToF/Save_Data.m
 UbiLocate/matlab_scripts/Extract_ToF/Compute_ToF_music.m
 ```
 
-The output is the ToF.
+The output of Compute_ToF_music.m is the ToF, variable ToF.
 
 The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
