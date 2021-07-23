@@ -55,7 +55,9 @@ esac
 echo "Setting up the transmitter"
 sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /jffs/LEGACY160/./configcsi.sh 157 80 
 
-sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 txchain $nss_mask
+#sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 txchain $nss_mask
+sshpass -p ${ps} ssh ${us}@192.168.2.${tx} /usr/sbin/wl -i eth6 txcore -k ${nss_mask} -o ${nss_mask} -s  ${nss} -c ${nss_mask}
+
 echo "Setting up the receiver"
 
 for rx in $rxs ; do
