@@ -9,12 +9,21 @@ from [here](https://eprints.networks.imdea.org/2318/1/main.pdf)
 
 UbiLocate was presented at MobiSys 2021. If you find UbiLocate useful, we kindly ask you to cite the paper:
 ```
-@inproceedings{pizarro2021accurate,
-  title={Accurate ubiquitous localization with off-the-shelf IEEE 802.11 ac devices},
-  author={Pizarro, Alejandro Blanco and Beltr{\'a}n, Joan Palacios and Cominelli, Marco and Gringoli, Francesco and Widmer, Joerg},
-  booktitle={Proceedings of the 19th Annual International Conference on Mobile Systems, Applications, and Services},
-  pages={241--254},
-  year={2021}
+@inproceedings{10.1145/3458864.3468850,
+author = {Pizarro, Alejandro Blanco and Beltr\'{a}n, Joan Palacios and Cominelli, Marco and Gringoli, Francesco and Widmer, Joerg},
+title = {Accurate Ubiquitous Localization with Off-the-Shelf IEEE 802.11ac Devices},
+year = {2021},
+isbn = {9781450384438},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3458864.3468850},
+doi = {10.1145/3458864.3468850},
+booktitle = {Proceedings of the 19th Annual International Conference on Mobile Systems, Applications, and Services},
+pages = {241–254},
+numpages = {14},
+keywords = {CSI, wireless networks, indoor localization, AoA, ToF, 802.11ac},
+location = {Virtual Event, Wisconsin},
+series = {MobiSys '21}
 }
 ```
 
