@@ -16,7 +16,7 @@ UbiLocate was presented at MobiSys 2021. If you find UbiLocate useful, we kindly
   pages={241--254},
   year={2021}
 }
-``
+```
 
 
 ### You can find all the details about running UbiLocate below
