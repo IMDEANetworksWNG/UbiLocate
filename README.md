@@ -7,7 +7,16 @@ without excessive degradation under NLOS. It is completely
 implemented on off-the-shelf 802.11ac router. You can download the paper
 from [here](https://eprints.networks.imdea.org/2318/1/main.pdf)
 
-UbiLocate was presented at MobiSys 2021
+UbiLocate was presented at MobiSys 2021. If you find UbiLocate useful, we kindly ask you to cite the paper:
+```
+@inproceedings{pizarro2021accurate,
+  title={Accurate ubiquitous localization with off-the-shelf IEEE 802.11 ac devices},
+  author={Pizarro, Alejandro Blanco and Beltr{\'a}n, Joan Palacios and Cominelli, Marco and Gringoli, Francesco and Widmer, Joerg},
+  booktitle={Proceedings of the 19th Annual International Conference on Mobile Systems, Applications, and Services},
+  pages={241--254},
+  year={2021}
+}
+``
 
 
 ### You can find all the details about running UbiLocate below
