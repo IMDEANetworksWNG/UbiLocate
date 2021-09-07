@@ -1,5 +1,27 @@
 #!/bin/sh
 
+nss=$1
+
+if [ "$nss" = "" ]; then
+  echo "Missing number of spatial streams"
+  exit 1
+fi
+
+
+case $nss in
+1)
+  nss_mask=1
+  echo $nss_mask 
+  ;;
+4)
+  nss_mask=f
+  ;;
+*)
+  echo "Invalid spatial streams"
+  exit 1
+  ;;
+esac
+
 
 cd "$(dirname "$0")"
 echo $PATH
@@ -21,7 +43,7 @@ NODEID=$(ifconfig br0 | grep inet | awk '{ print $2 }' | awk -F"." '{ print $4 }
 dd if=/dev/zero bs=4 count=1 of=/tmp/4zeroes
 cat /tmp/4zeroes packetnode1x1.dat > packetnode1x1BP.dat
 
-CONFIG=$(./makecsiparams -e 1 -m ff:ff:00:12:34:56 -c 0xe29b -C 0xf -N 0x1 -b 0x88)
+CONFIG=$(./makecsiparams -e 1 -m ff:ff:00:12:34:56 -c 0xe29b -C 0xf -N 0x${nss_mask} -b 0x88)
 LEN=34
 ./nexutil -I eth6 -s500 -b -l${LEN} -v${CONFIG} 
 

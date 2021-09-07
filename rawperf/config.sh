@@ -42,5 +42,5 @@ wl -i eth6 txcore -s 1 -c 1 -o 1 -k 1
 wl -i eth6 shmem 0x1776 0x9000
 
 # pace frames every 4ms
-wl -i eth6 shmem 0x177e 0xf000
+wl -i eth6 shmem 0x177e 0xe000
 
