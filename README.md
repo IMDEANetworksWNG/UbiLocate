@@ -35,7 +35,6 @@ series = {MobiSys '21}
 - [Getting started](#gettingstarted)
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
-- [Getting CSI by MATLAB](#getting-csi-by-matlab)
 - [Calibrating the router](#calibrating-the-router)
 - [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 - [Extracting ToF](#extracting-tof)
@@ -144,7 +143,7 @@ rxs="4"
 
 If extracting CSI from more than one router is needed, just simple add more numbers at the end. Example rxs="4 5"
 
-## Getting CSI by MATLAB
+Once this is done. You can get the CSI by MATLAB as follows:
 
 
 Run the follwoing mat_files (change the BW if it is not 80): 
@@ -236,49 +235,3 @@ The output of Compute_ToF_music.m is the ToF, variable ToF.
 
 The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
-<!-- 
------------------------------------------------------------------
-How to calibrate the data
------------------------------------------------------------------
-To calibrate the data you have to connect the the rightmost 
-antenna of the TX to a spliiter and every output of the splitter
-to every port of the RX router. If one output is not use, please
-connect a 50 ohms resistor.
-
-Once this setup is ready, please run bash send_collect.sh calibration
-to extrac the csi data that it will be use to calibrate over the 
-air data.
-
-Once, this is done and you want to extract CSI from over the air
-packets, connect the cables to the antennas.
-
-PLEASE, note that the logical indexes of the port of the router 
-do not correspond to the physical ones, please see ~/Router_Array_Final_Index.jpg
-I will use the same one for the antenna array.
-
-
-## Enabling NTP on a linux server
-
-In order to save the CSI data, you have to install NTP in a linux
-server, this server must be connected to all routers, it must
-be in the same network.
-
-To do that, run the following commands:
-* sudo apt-get install ntp
-
-Also run:
-gcc -o hardware_scripts/csicollector hardware_scripts/csicollector.c -lpcap
-
-Then you need to configure each asus in order to use the linux computer
-as ntp synch server. To do this, open the web interface, go to
-“Administration”, “System”, there is a box with “NTP Server”, 
-fill it with the IP address of the linux computer.
-
-Start NTP server, run:
-
-sudo /etc/init.d/ntp start
-
-The server have to be running while the capturing CSI data
-
-
--->
