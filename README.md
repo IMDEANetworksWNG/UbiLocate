@@ -127,8 +127,8 @@ If extracting CSI from more than one router is needed, just simple add more numb
 
 Once this is done. You can get the CSI by MATLAB as follows:
 
-
 Run the follwoing mat_files (change the BW if it is not 80): 
+
 1) 1 spatial stream:
 ```
 matlab_scripts/Extract_Data/Extract_CSI_1.m
@@ -142,7 +142,56 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
 
 ## Extracting CSI faster
-This UbiLocate version sends packet faster than the previous one. 
+This UbiLocate version sends packet faster than the previous one. *To do so, you need to use the files in hadware_scripts_rawperf* which will automatize the CSI extraction based on the files inside rawperf. The folder rawperf must be on the router. 
+
+The sending packet rate can be configured. The defaults setting is 
+
+Go to the folder hadware_scripts_rawperf, afterwards: 
+
+1) Load the dhd.ko module to extract CSi
+```
+bash reload.sh 
+```
+2) Configure the TX and RX router. Note that nss means the number of spatial stream. Use 1 (1x4 MIMO) or 4 (4x4 MIMO).
+```
+bash config.sh nss
+```
+ 
+These two scripts must be executed one time. Once you do a power cycle of the router you have to run them another time.
+
+To send packets and extract CSI, run this command:
+```
+bash send_collect.sh name packets ss
+```
+where name is the name of the folder where you want to save the traces,
+ss means number of spatial streams, possible values 1 (1x4 MIMO) or 4 (4x4 MIMO), packets
+means the number of packets to send. *It sends 80MHz only*
+
+NOTE1: Every bash file is configured with the login and pass as imdea.
+Please change it. The variables are at the beggining of every file us and pw:
+```
+# ssh logins
+us="imdea" # change it
+ps="imdea" # change it
+```
+
+NOTE2: These scripts assume that the TX is 192.168.2.3 and 1 RX as 192.168.2.4.
+Change the numbers:
+```
+# rx and tx numbers
+tx="3"
+rxs="4"
+```
+
+If extracting CSI from more than one router is needed, just simple add more numbers at the end. Example rxs="4 5"
+
+Once this is done. You can get the CSI by MATLAB as follows:
+```
+matlab_scripts/Extract_Data_rawperf/Save_data.m
+```
+
+The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHz. The size is (Number of Packets) X (256) X (4) X (4). In addition, you may want to save the toa_packets variable which contains the time of arrival of every packet. 
+
 
 ## Calibrating the router
 
