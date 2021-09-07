@@ -142,7 +142,7 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
 
 ## Extracting CSI faster
-This UbiLocate version sends packet faster than the previous one. *To do so, you need to use the files in hadware_scripts_rawperf* which will automatize the CSI extraction based on the files inside rawperf. The folder rawperf must be on the router. 
+This UbiLocate version sends packet faster than the previous one. **To do so, you need to use the files in hadware_scripts_rawperf** which will automatize the CSI extraction based on the files inside rawperf. The folder rawperf must be on the router. 
 
 The sending packet rate can be configured. The defaults setting is 
 
@@ -165,7 +165,7 @@ bash send_collect.sh name packets ss
 ```
 where name is the name of the folder where you want to save the traces,
 ss means number of spatial streams, possible values 1 (1x4 MIMO) or 4 (4x4 MIMO), packets
-means the number of packets to send. *It sends 80MHz only*
+means the number of packets to send. **It sends 80MHz only**
 
 NOTE1: Every bash file is configured with the login and pass as imdea.
 Please change it. The variables are at the beggining of every file us and pw:
