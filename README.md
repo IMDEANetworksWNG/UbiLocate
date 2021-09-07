@@ -144,7 +144,15 @@ The csi data will be in the variable csi_data, it has a size of (Number of Packe
 ## Extracting CSI faster
 This UbiLocate version sends packet faster than the previous one. **To do so, you need to use the files in hadware_scripts_rawperf** which will automatize the CSI extraction based on the files inside rawperf. The folder rawperf must be on the router. 
 
-The sending packet rate can be configured. The defaults setting is 
+The sending packet rate can be configured. The defaults setting is to send packets every 8ms. To tune the packet rate, you need to modify two files.
+
+1) harware_scripts_rawperf/config.sh
+```
+# pace frames every 8ms
+wl -i eth6 shmem 0x177e 0xe000
+```
+
+**To config and sending, follow the steps below:**
 
 Go to the folder hadware_scripts_rawperf, afterwards: 
 
