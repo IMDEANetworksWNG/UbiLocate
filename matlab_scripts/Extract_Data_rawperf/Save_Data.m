@@ -9,7 +9,7 @@ clear
 BW = 80;                % bandwidth
 
 
-name_folder = "test_github_4ss";
+name_folder = "test_github_4ss_2";
 
 routers_csi = string([4]);
 routers_csi_num = [4];
