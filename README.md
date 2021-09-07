@@ -35,6 +35,7 @@ series = {MobiSys '21}
 - [Getting started](#gettingstarted)
 - [Set up the router](#set-up-the-router).
 - [Extracting CSI](#extracting-csi)
+- [Extracting CSI faster](#extracting-csi-faster)
 - [Calibrating the router](#calibrating-the-router)
 - [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 - [Extracting ToF](#extracting-tof)
@@ -61,25 +62,6 @@ Nota that, the logical index of the CSI extractor tool correspond to the physica
 <img src="https://github.com/IMDEANetworksWNG/UbiLocate/blob/main/Router_Array_Final_Index.jpg" width="600" height="300">
 
 
-<!-- 
-## Files
-
-
-The GitHub project contains the following subfolders:
-* csisoftware: It contains the files to configure the RX routers for CSI
-* LEGACY160: It contains the files to configure the TX router for CSI
-* hardware_scripts: It contains the bash files to automatize
-the extraction of the CSI data. It takes the CSI from the router
-and save it in a pcap files
-* trace: It contains the pcap files
-* matlab_Scripts: It contains the scripts to extract the CSI
-data from pcap files to MATLAB files and also calibrate the CSI
-* mat_files: It contains the mat files, CSI data
-* tofsoftware: It contains the files to configure the router for ToF
--->
-
-
-
 ## Set up the router
 
 First, you have to configure the router by the ASUS webpage.
@@ -96,7 +78,7 @@ Once these steps are done:
  folder
 * Copy the LEGACY160 to the TX router inside the /jffs/ folder
 * Copy the tofsoftware to every router inside the /jffs/ folder
-
+* Copy the rawperf to the RX router inside the /jffs/ folder
 ## Extracting CSI
 
 To extract CSI, you have to use the files in hadware_scripts. 
@@ -159,6 +141,8 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 
 The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
 
+## Extracting CSI faster
+This UbiLocate version sends packet faster than the previous one. 
 
 ## Calibrating the router
 
