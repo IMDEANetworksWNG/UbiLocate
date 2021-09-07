@@ -3,6 +3,7 @@ close all
 clc
 clear
 
+% addpath("../functions")
 
 %% configuration
 BW = 80;                % bandwidth
@@ -22,7 +23,9 @@ csi_data = zeros(packets, K, N,M);
 for ii = 1:packets
     for jj = 1:N
         for kk = 1:M
-            csi_data(ii,:,jj,kk) = csi_store{1,ii}.core{1,jj}.nss{1,kk}.data;
+
+        csi_data(ii,:,jj,kk) = csi_store{1,ii}.core{1,jj}.nss{1,kk}.data;
+%                 csi_data_calibrated(ii,:,jj) = csi_data(ii,:,jj)./(csi_storeA_aoa{1,1}.core{1,jj}.nss{1,1}.data).';
         end
     end
 end
@@ -31,5 +34,6 @@ csi_data = csi_data(2:end,:,:,:);
 packets = packets -1;
 toa_packets = toa_packets(2:end);
 
-% The csi data is inside the variable csi data and the toa_packets means
-% the time of arrival of the packets. Save both.
+        
+    end
+end

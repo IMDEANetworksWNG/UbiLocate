@@ -1,4 +1,4 @@
-function [csi_store_aoa rxtshfc_aoa] = load80MHZstudio_2(FILE, BW, nodeid);
+function [csi_store_aoa rxtshfc_aoa] = load80MHZstudio_2(FILE, BW);
  
 %% csireader.m
 %
