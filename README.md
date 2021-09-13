@@ -142,18 +142,18 @@ matlab_scripts/Extract_Data/Extract_CSI_4.m
 The csi data will be in the variable csi_data, it has a size of (Number of Packets) X (Number of Subcarriers) X (RX chains) X (Spatial steams). For example, if you have configured the routers to extract 4 RX chains with 4 spatial streams and 80MHZ. The size is (Number of Packets) X (256) X (4) X (4)
 
 ## Extracting CSI faster
-This UbiLocate version sends packet faster than the previous one. **To do so, you need to use the files in hadware_scripts_rawperf** which will automatize the CSI extraction based on the files inside rawperf. The folder rawperf must be on the router. 
+This UbiLocate version sends packet faster than the previous one. **To do so, you need to use the files in hadware_scripts_periodically** which will automatize the CSI extraction based on the files inside send_periodically. The folder send_periodically must be on the router. 
 
 The sending packet rate can be configured. The defaults setting is to send packets every 8ms. To tune the packet rate, you need to modify two files.
 
-1) harware_scripts_rawperf/config.sh
+1) harware_scripts_periodically/config.sh
 ```
 # pace frames every 8ms
 wl -i eth6 shmem 0x177e 0xe000
 ```
 0xe000 means 8ms. If the one's complement is applied, the results is: 0x1fff = 8191 which correspond closely to 8ms. 4ms means 0xf000 and 2ms means 0xf700. 
 
-2) harware_scripts_rawperf/send.sh
+2) harware_scripts_periodically/send.sh
 ```
 ./rawperf -i eth6 -n ${packets} -f packetnode1x1BP.dat -t 8000 -q ${nss_mask}
 ```
@@ -161,7 +161,7 @@ where 8000 means 8ms, change it accordignly.
 
 **To config and sending, follow the steps below:**
 
-Go to the folder hadware_scripts_rawperf, afterwards: 
+Go to the folder harware_scripts_periodically, afterwards: 
 
 1) Load the dhd.ko module to extract CSi
 ```
