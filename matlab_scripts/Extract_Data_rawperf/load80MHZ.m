@@ -50,9 +50,9 @@ sncsis = [];
 txtsdata = [];
 framecsi = {};
 
-id = hex2dec(nodeid([3 4 1 2]));
+% id = hex2dec(nodeid([3 4 1 2]));
 
-capra = [];
+% capra = [];
 
 while (k < n)
     k = k + 1;
@@ -83,21 +83,6 @@ while (k < n)
 %     data = typecast(f.payload(1:end), 'uint16');
 
     if isequal(data(1:3), wirelesstype),
-        % check this is the right packet 
-	% we use mac addr 2 as filter: last two bytes as index of station
-        % 0x0090:  8802 0000 ffff ffff ffff 0012 3456 789b  ............4Vx.
-        expectedheader = uint16([0 648 0 65535 65535 65535 4608 22068 id])';
-        if length(data) >= 80 & isequal(data(72:80), expectedheader),
-            % extract ts and sequence number of this frame, (we should match it with the
-            % sequence number in the next packet with the csi but it's not important right now)
-            % just remember the sequence number and the timestamp so that we have the transmission
-            % time stamp for that sequence number
-            % 0x00a0:  79e5 7c7f 5016 6016 0000 aaaa 0300 0000  y.|.P.`.........
-            sn = data(83);
-            txts = typecast(flipud(data(81:82)), 'uint32');
-	    capra = [capra ; txts];
-            txtsdata = [txtsdata; [uint32(sn) txts]];
-        end;
         continue;
     end;
 
@@ -140,11 +125,6 @@ while (k < n)
         disp('skipped frame with incorrect size');
         return;
     end
-%     data(26)
-    % check if the id of the node is that expected
-    if data(26) ~= data(26),
-      continue;
-    end;
 
     % extract configuration for this packet, cannot use it now, start from next one (see below)
     magic = data(22);
