@@ -1,4 +1,4 @@
-# This GitHub project contains all the files needed to run UbiLocate.
+# This GitHub project contains all the needed files to run UbiLocate.
 
 
 UbiLocate is a WiFi indoor localization system that copes well with 
