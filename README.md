@@ -78,7 +78,7 @@ Once these steps are done:
  folder
 * Copy the LEGACY160 to the TX router inside the /jffs/ folder
 * Copy the tofsoftware to every router inside the /jffs/ folder
-* Copy the rawperf to every router inside the /jffs/ folder
+* Copy the send_periodically to every router inside the /jffs/ folder
 ## Extracting CSI
 
 To extract CSI, you have to use the files in hadware_scripts. 
