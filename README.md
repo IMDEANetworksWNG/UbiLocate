@@ -39,6 +39,7 @@ series = {MobiSys '21}
 - [Calibrating the router](#calibrating-the-router)
 - [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 - [Extracting ToF](#extracting-tof)
+- [FAQs](#faqs)
 
 <!----- [Files](#files)--->
 
@@ -268,6 +269,7 @@ Change the numbers:
 ASUS="3 4"
 ```
 
+
 If extracting ToF from more than one pair of routers is needed, just simple add more numbers at the end. Example ASUS="3 4 5"
 
 
@@ -283,3 +285,11 @@ The output of Compute_ToF_music.m is the ToF, variable ToF.
 
 The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
+## FAQs
+
+1) What do the calibration values inside cal.mat mean?
+--> BP0_AoA: the measured beam-pattern at reception  in the direction 0 (perpendicular to the array)
+--> BP0_AoD: same as BP0_AoA but at the transmittter side.
+--> TX_delay_coef: the dalay at every transmitter antenna
+
+After the calibration, you may need to refine the calibration. The values at the cal.mat are the ones that we measured. 
