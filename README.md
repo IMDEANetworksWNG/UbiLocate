@@ -287,7 +287,7 @@ The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
 ## FAQs
 
-1) What do the calibration values inside cal.mat mean?
+**1) What do the calibration values inside cal.mat mean?**
 
 --> BP0_AoA: the measured beam-pattern at reception  in the direction 0 (perpendicular to the array)
 --> BP0_AoD: same as BP0_AoA but at the transmittter side.
