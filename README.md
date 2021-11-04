@@ -152,7 +152,7 @@ The sending packet rate can be configured. The defaults setting is to send packe
 # pace frames every 8ms
 wl -i eth6 shmem 0x177e 0xe000
 ```
-0xe000 means 8ms. If the one's complement is applied, the results is: 0x1fff = 8191 which correspond closely to 8ms. 4ms means 0xf000 and 2ms means 0xf700. 
+0xe000 means 8ms. If the one's complement is applied, the results is: 0x1fff = 8191 which correspond closely to 8ms. 4ms means 0xf000 and 2ms means 0xf800. 
 
 2) harware_scripts_periodically/send.sh
 ```
