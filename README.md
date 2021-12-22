@@ -285,6 +285,9 @@ The output of Compute_ToF_music.m is the ToF, variable ToF.
 
 The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
+## Limitations.
+1) The router will reboot automatically when reload.sh is executed two times.
+
 ## FAQs
 
 **1) What do the calibration values inside cal.mat mean?**
