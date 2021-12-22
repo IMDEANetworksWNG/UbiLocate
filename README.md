@@ -300,6 +300,6 @@ The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
 After the calibration, you may need to refine the calibration. The values at the cal.mat are the ones that we measured. 
 
-**2) What is the content of the reference80true.mat file in /matlab_scripts/Extract_ToF? **
+**2) What is the content of the reference80true.mat file in /matlab_scripts/Extract_ToF?**
 
 It contais a CSI data template to remove the echos on the receiver side. To do so, we apply a deconvolution and that is why we use a hadamard division in the MATLAB code. The CSI data where captured by a pair of ASUS routers connecting the first chains of both (1's chain in device image, the rightmost chain on the ASUS).
