@@ -39,6 +39,7 @@ series = {MobiSys '21}
 - [Calibrating the router](#calibrating-the-router)
 - [Extracting the path parameters by MATLAB](#extracting-the-path-parameters-by-matlab)
 - [Extracting ToF](#extracting-tof)
+- [Limitations](#limitations)
 - [FAQs](#faqs)
 
 <!----- [Files](#files)--->
@@ -285,7 +286,8 @@ The output of Compute_ToF_music.m is the ToF, variable ToF.
 
 The CSI data for the full MIMO are saved in the variable csi_store_AoA
 
-## Limitations.
+## Limitations
+
 1) The router will reboot automatically when reload.sh is executed two times.
 
 ## FAQs
