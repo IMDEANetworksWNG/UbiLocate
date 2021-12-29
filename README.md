@@ -303,3 +303,8 @@ After the calibration, you may need to refine the calibration. The values at the
 **2) What is the content of the reference80true.mat file in /matlab_scripts/Extract_ToF?**
 
 It contais a CSI data template to remove the echos on the receiver side. To do so, we apply a deconvolution and that is why we use a hadamard division in the MATLAB code. The CSI data where captured by a pair of ASUS routers connecting the first chains of both (1's chain in device image, the rightmost chain on the ASUS).
+
+
+**3) Can I use the 4X4 MIMO packets obtained every 32 packets by the ToF script as the reference CSI in the case of using coaxial cable and power divider?**
+
+Yes, you can do it. The idea of extracting from time to time the CSI is to enable a join extraction of tof and CSI.
