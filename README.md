@@ -9,7 +9,7 @@ from [here](https://eprints.networks.imdea.org/2318/1/main.pdf)
 
 UbiLocate was presented at MobiSys 2021. If you find UbiLocate useful, we kindly ask you to cite the paper:
 ```
-@inproceedings{10.1145/3458864.3468850,
+@inproceedings{UbiLocate,
 author = {Pizarro, Alejandro Blanco and Beltr\'{a}n, Joan Palacios and Cominelli, Marco and Gringoli, Francesco and Widmer, Joerg},
 title = {Accurate Ubiquitous Localization with Off-the-Shelf IEEE 802.11ac Devices},
 year = {2021},
